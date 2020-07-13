@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Poll {
 
-    private String id;
+    private int id;
     private List<Choice> choices;
     private User createdBy;
     private Member voters;
@@ -21,13 +21,13 @@ public class Poll {
     }
     public static class Builder{
 
-        private String id;
+        private int id;
         private List<Choice> choices;
         private User createdBy;
         private Member voters;
         private String votes;
 
-        public Builder setId(String id) {
+        public Builder setId(int id) {
             this.id = id;
             return this;
 
@@ -63,9 +63,13 @@ public class Poll {
             return this;
         }
 
+        public Poll build(){
+            return new Poll(this);
+        }
+
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

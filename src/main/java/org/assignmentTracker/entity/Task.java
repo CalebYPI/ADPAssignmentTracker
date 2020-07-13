@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Task {
     private int taskId, assignmentId, memberId;
-    private List<Student> students;
+    private long students;
 
     private Task() {
     }
@@ -17,7 +17,7 @@ public class Task {
         return assignmentId;
     }
 
-    public List<Student> getStudents() {
+    public long getStudents() {
         return students;
     }
 
@@ -27,7 +27,7 @@ public class Task {
 
     public static class Builder{
         private int taskId, assignmentId, memberId;
-        private List<Student> students;
+        private long students;
 
         public Builder setTaskId(int taskId) {
             this.taskId = taskId;
